@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    height: 100vh;
+    /* background: linear-gradient(135deg, #33f802, #03b90c); */
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+  }
+  .wrapper {
+    width: 90%;
+    max-width: 450px;
+    max-height: 800px;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    padding: 3em;
+    border-radius: 1em;
+  }
+  .containerr {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #wheel {
+    max-height: inherit;
+    width: inherit;
+    top: 0;
+    padding: 0;
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #spin-btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 26%;
+    width: 26%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    background: radial-gradient(#fdcf3b 50%, #d88a40 85%);
+    color: #c66e16;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+  img {
+    position: absolute;
+    width: 50px;
+    top: 45%;
+    right: -8%;
+  }
+  #final-value {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 1.5em;
+    color: #202020;
+    font-weight: 500;
+  }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      font-size: 12px;
+    }
+    img {
+      right: -5%;
+    }
+  }
+
+  .roulette-table {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.roulette-button {
+    justify-content: center;
+    align-items: center;
+    width:50px;
+    height: 25px;
+    text-align: center;
+    font-size: 1.2em;
+    border: 1px solid #ddd;
+}
+.number {
+    background-color: #fff;
+    color: #000;
+}
+.number.zero {
+    right: 0;
+    background-color: #00b33c;
+    color: #fff;
+    width:50%;
+    height: 60%;
+    min-width: 50px;
+}
+.number.red {
+    background-color: #ff3333;
+    width: 50%;
+    color: #fff;
+}
+.number.black {
+    background-color: #000;
+    width: 50%;
+    color: #fff;
+}
+.number.t{
+  background-color: transparent;
+  width: 50%;
+  color: #fff;
+  min-width: 50px;
+}
+.number.trecina{
+  background-color: transparent;
+  color: #fff;
+  width: 50%;
+}
+.number.boje{
+  background-color: transparent;
+  color: #fff;
+  width: 50%;
+  min-width: 60px;
+}
+
+.buttona{
+  background-color: white;
+  border: none;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  border-radius: 70%;
+  transition: .2s ease-out;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  margin-right: 10px;
+}
+
+.buttona:focus {
+  outline: none;
+  box-shadow: 7px 4px 7px 4px rgb(46, 46, 46);
+}
+
+.buttona.deset{
+  border: 7px rgb(0, 238, 255) solid;
+}
+.buttona.dvadeset{
+  border: 7px rgb(28, 236, 0) solid;
+}
+.buttona.pedeset{
+  border: 7px red solid;
+}
+.buttona.sto{
+  border: 7px rgb(122, 6, 199) solid;
+}
+
+@media (-moz-touch-enabled:0),(pointer: fine) {
+  .buttona:hover {
+    transform: translateY(-4px);
+      }
+}
+@media screen and (min-width: 768px) {
+  .filters-group-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.bet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid orange;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.roulette-button {
+  display: inline-block;
+  height: 50px; /* Increased height */
+  width: 50px; /* Increased width */
+  line-height: 50px; /* Vertically center text */
+  text-align: center;
+  border: 1px solid #000;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+.bet-square {
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.highlight {
+  outline: 2px solid white;
+  outline-offset: -2px;
+  border-radius: 50%;
+  z-index: 0;
+}
+

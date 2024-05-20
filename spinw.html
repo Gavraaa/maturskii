@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spin Wheel App</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="spinw.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  </head>
+  <body>
+    
+    <h1 style="text-align: center; margin-top: 50px; color: #fff;">ROULETTE</h1>
+    <div class="wrapper">
+        <div class="containerr">
+          <canvas id="wheel"></canvas>
+          <button id="spin-btn">Spin</button>
+          <img src="spinner-arrow-.svg" alt="spinner-arrow" />
+        </div>
+        <div id="final-value">
+          <p style="color: #fff;">Click On The Spin Button To Start</p>
+        </div>
+      </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       <div class="container mt-3" style="display: flex;">
+          <div class="col-md-2 roulette-table" style=" justify-content: right;right: 0;">
+            <button class="roulette-button number zero" id="0">0</button>
+          </div>
+          <div class="col-md-10" style="justify-content: center;">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="roulette-table">
+                  <div class="roulette-button number red bet-square" id="3">3</div>
+                  <div class="roulette-button number black bet-square" id="6">6</div>
+                  <div class="roulette-button number red bet-square" id="9">9</div>
+                  <div class="roulette-button number red bet-square" id="12">12</div>
+                  <div class="roulette-button number black bet-square" id="15">15</div>
+                  <div class="roulette-button number red bet-square" id="18">18</div>
+                  <div class="roulette-button number red bet-square" id="21">21</div>
+                  <div class="roulette-button number black bet-square" id="24">24</div>
+                  <div class="roulette-button number red" id="27">27</div>
+                  <div class="roulette-button number red" id="30">30</div>
+                  <div class="roulette-button number black" id="33">33</div>
+                  <div class="roulette-button number red" id="36">36</div>
+                  <div class="roulette-button number t" id="2to1a">2 to 1</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="roulette-table">
+                  <div class="roulette-button number black" id="2">2</div>
+                  <div class="roulette-button number red" id="5">5</div>
+                  <div class="roulette-button number black" id="8">8</div>
+                  <div class="roulette-button number black" id="11">11</div>
+                  <div class="roulette-button number red" id="14">14</div>
+                  <div class="roulette-button number black" id="17">17</div>
+                  <div class="roulette-button number black" id="20">20</div>
+                  <div class="roulette-button number red" id="23">23</div>
+                  <div class="roulette-button number black" id="26">26</div>
+                  <div class="roulette-button number black" id="29">29</div>
+                  <div class="roulette-button number red" id="32">32</div>
+                  <div class="roulette-button number black" id="35">35</div>
+                  <div class="roulette-button number t" id="2to1b">2 to 1</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="roulette-table">
+                  <div class="roulette-button number red" id="1">1</div>
+                  <div class="roulette-button number black" id="4">4</div>
+                  <div class="roulette-button number red" id="7">7</div>
+                  <div class="roulette-button number black" id="10">10</div>
+                  <div class="roulette-button number black" id="13">13</div>
+                  <div class="roulette-button number red" id="16">16</div>
+                  <div class="roulette-button number red" id="19">19</div>
+                  <div class="roulette-button number black" id="22">22</div>
+                  <div class="roulette-button number red" id="25">25</div>
+                  <div class="roulette-button number black" id="28">28</div>
+                  <div class="roulette-button number black" id="31">31</div>
+                  <div class="roulette-button number red" id="34">34</div>
+                  <div class="roulette-button number t" id="2to1c">2 to 1</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="roulette-table">
+                  <div class="roulette-button number trecina">1/3</div>
+                  <div class="roulette-button number trecina">2/3</div>
+                  <div class="roulette-button number trecina">3/3</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="roulette-table">
+                  <div class="roulette-button number boje">1-18</div>
+                  <div class="roulette-button number boje">EVEN</div>
+                  <div class="roulette-button number boje">🔴</div>
+                  <div class="roulette-button number boje">⚫</div>
+                  <div class="roulette-button number boje">ODD</div>
+                  <div class="roulette-button number boje">19-36</div>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+    </div>
+<br><br>
+    <div class="container" style="display: flex; justify-content: center;align-items: center;">
+      <button class="buttona deset"  id="deset" onclick="bet()">10</button>
+      <button class="buttona dvadeset"  id="dvapet" onclick="bet()">25</button>
+      <button class="buttona pedeset"  id="petnula" onclick="bet()">50</button>
+      <button class="buttona sto"  id="sto" onclick="bet()">100</button>
+    </div>
+
+
+
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- Chart JS Plugin for displaying text over chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+    <!-- Script -->
+    <script src="spinw.js"></script>
+  </body>
+</html>
